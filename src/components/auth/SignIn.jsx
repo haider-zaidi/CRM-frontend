@@ -15,6 +15,8 @@ const SignIn = () => {
         id_token: credentialResponse.credential,
       });
 
+      console.log(res);
+      
       const { token, user } = res.data;
       login(token, user.name, user.picture);
       navigate('/dashboard');
