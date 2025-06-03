@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-const apiUrl = import.meta.env.VITE_BACKEND_URL
+const apiUrl = "https://crmapp-backend.onrender.com"; 
+
 
 const CampaignList = () => {
   const [segments, setSegments] = useState([]);
