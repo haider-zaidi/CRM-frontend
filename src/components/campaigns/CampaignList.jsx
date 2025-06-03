@@ -16,7 +16,7 @@ const CampaignList = () => {
 
   const fetchSegments = async () => {
     try {
-      const res = await axios.get(`${apiURL}/api/segments`, {
+      const res = await axios.get(`${apiUrl}/api/segments`, {
         headers: { 
           Authorization: `Bearer ${localStorage.getItem('token')}` 
         }
@@ -29,7 +29,7 @@ const CampaignList = () => {
 
   const fetchCampaigns = async () => {
     try {
-      const res = await axios.get(`${apiURL}/api/campaigns`, {
+      const res = await axios.get(`${apiUrl}/api/campaigns`, {
         headers: { 
           Authorization: `Bearer ${localStorage.getItem('token')}` 
         }
@@ -45,7 +45,7 @@ const CampaignList = () => {
     setLoading(true);
     try {
       await axios.post(
-        `${apiURL}/api/campaigns/send`,
+        `${apiUrl}/api/campaigns/send`,
         {
           name,
           message,
@@ -78,7 +78,7 @@ const CampaignList = () => {
 
     try {
       const res = await axios.post(
-        `${apiURL}/api/campaigns/aiSuggestions`,
+        `${apiUrl}/api/campaigns/aiSuggestions`,
         { campaignName: name },
         {
           headers: { 

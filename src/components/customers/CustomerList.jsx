@@ -10,7 +10,7 @@ const CustomerList = () => {
 
   const fetchCustomers = async () => {
     try {
-      const res = await axios.get(`${apiURL}/api/customers`, {
+      const res = await axios.get(`${apiUrl}/api/customers`, {
         headers: { 
           Authorization: `Bearer ${localStorage.getItem('token')}` 
         }
@@ -29,7 +29,7 @@ const CustomerList = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `${apiURL}/api/customers`,
+        `${apiUrl}/api/customers`,
         { name, email, phone },
         {   headers: { 
           Authorization: `Bearer ${localStorage.getItem('token')}` 

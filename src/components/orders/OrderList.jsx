@@ -20,7 +20,7 @@ const OrderList = () => {
     const fetchOrders = async () => {
         try {
             const userId = localStorage.getItem('userId');
-            const res = await axios.get(`${apiURL}/api/orders`, {
+            const res = await axios.get(`${apiUrl}/api/orders`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
@@ -35,7 +35,7 @@ const OrderList = () => {
         e.preventDefault();
         try {
             const userId = localStorage.getItem('userId');
-            await axios.post(`${apiURL}/api/orders`, formData, {
+            await axios.post(`${apiUrl}/api/orders`, formData, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }

@@ -43,7 +43,7 @@ const SegmentList = () => {
   const previewAudience = async () => {
     try {
       const res = await axios.post(
-        `${apiURL}/api/segments/preview`,
+        `${apiUrl}/api/segments/preview`,
         { rule: { logicType, conditions } },
         {
           headers: {
@@ -60,7 +60,7 @@ const SegmentList = () => {
   const saveSegment = async () => {
     try {
       await axios.post(
-        `${apiURL}/api/segments`,
+        `${apiUrl}/api/segments`,
         { name, rule: { logicType, conditions } },
         {
           headers: {
@@ -79,7 +79,7 @@ const SegmentList = () => {
 
   const fetchSegments = async () => {
     try {
-      const res = await axios.get(`${apiURL}/api/segments`, {
+      const res = await axios.get(`${apiUrl}/api/segments`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         },
