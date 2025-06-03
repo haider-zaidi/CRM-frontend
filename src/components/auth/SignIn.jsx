@@ -3,7 +3,7 @@ import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-const apiUrl = import.meta.env.VITE_BACKEND_URL
+const apiUrl = "https://crmapp-backend.onrender.com"
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const SignIn = () => {
       });
 
       console.log(res);
-      
+
       const { token, user } = res.data;
       login(token, user.name, user.picture);
       navigate('/dashboard');
